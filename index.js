@@ -46,7 +46,7 @@ const run = async () => {
         app.get("/news", async (req, res) => {
             const name = req.query.category;
             let newses = [];
-            if (name == "all-news") {
+            if (name == "all") {
                 newses = await newsCollection.find({}).toArray();
                 return res.send({
                     status: true,
